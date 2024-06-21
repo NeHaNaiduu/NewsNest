@@ -1,0 +1,156 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+header{
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
+  padding: 10px 50px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.news-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.drop-cat{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  text-align: center;
+  padding: 10px 0;
+}
+.drop-cat:hover{
+  background-color: blue;
+}
+.drop-cat:hover .drop-cat-bg{
+  background-color: lightblue;
+}
+.toggle-drop{
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 1rem;
+}
+.toggle-list{
+  background-color: rgb(23, 21, 21);
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1;
+  min-width: 200px;
+}
+.nav-list{
+  list-style: none;
+  padding: 0;
+  margin-top: 60px;
+  margin-right: 30px;
+  width: 30vmin;
+  height: 50vmin;
+}
+.nav-list li{
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.nav-list li:hover{
+  color: gray;
+}
+.news-item{
+  max-width: 300px;
+  box-shadow: 2px 5px 10px;
+}
+.news-image{
+  width: 100%;
+}
+main{
+  display: flex;
+}
+.news-grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 50px;
+}
+
+@media (max-width:799px) {
+  .news-grid{
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+  } 
+  .nav-list{
+    margin-right: 0;
+    width: 25vmin;
+  }
+  header{
+    padding: 10px 10px; 
+  }
+}
+@media (max-width:399px) {
+  .news-grid{
+    grid-template-columns: repeat(1,1fr);
+    gap: 20px;
+  } 
+  .nav-list{
+    display: none;
+  }
+  header{
+    padding: 10px 10px; 
+  }
+  .toggle-list{
+    top: 40px;
+    right: 50px;
+    min-width: 100px;
+  }
+  .drop-cat{
+    width: 100%;
+  }
+  .drop-cat-bg{
+    font-size: 10px;
+  }
+}
